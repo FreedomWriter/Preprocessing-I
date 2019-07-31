@@ -53,7 +53,51 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@colors: purple;
+@grays: rgb(233, 223, 223);
+
+html, .container {
+	height: 100%;
+	max-width: 1200px;
+	padding: 1%;
+	font-size: 62.5%;
+
+	body {
+		display: flex;
+		flex-flow: row wrap;
+		color: @colors;
+		font-size: 1.8rem;
+
+		header {
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+
+			nav {
+				width: 30%;
+				display: flex;
+				justify-content: space-between;
+		
+				a {
+					text-decoration: none;
+					color: black;
+				}
+			}
+		}
+
+		.top {
+			padding: 2%;
+			margin: 2% auto;
+			height: 40%;
+			background: @grays;
+			display: flex;
+			flex-flow: column nowrap;
+
+			h1 {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	
 }
 
