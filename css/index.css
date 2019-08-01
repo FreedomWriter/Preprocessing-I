@@ -130,6 +130,16 @@ table {
 * {
   box-sizing: border-box;
 }
+/* variables */
+/* mixins*/
+.flex-spacebtwn {
+  display: flex;
+  justify-content: space-between;
+}
+.col-nowrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
 html,
 .container {
   height: 100%;
@@ -138,6 +148,12 @@ html,
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
   /* body*/
+}
+@media (max-width: 500px) {
+  html,
+  .container {
+    margin: 0% 2%;
+  }
 }
 html header,
 .container header {
@@ -150,6 +166,12 @@ html header nav,
   width: 30%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 500px) {
+  html header nav,
+  .container header nav {
+    width: 100%;
+  }
 }
 html header nav a,
 .container header nav a {
@@ -171,14 +193,21 @@ html body .top,
   height: 60rem;
   background: #e9dfdf;
   display: flex;
-  flex-flow: column nowrap;
   justify-content: space-between;
+  flex-flow: column nowrap;
 }
 html body .top .jonny,
 .container body .top .jonny {
   margin-top: 5%;
   width: 33%;
   height: 50%;
+}
+@media (max-width: 500px) {
+  html body .top .jonny,
+  .container body .top .jonny {
+    width: 100%;
+    height: 100%;
+  }
 }
 html body .top h1,
 .container body .top h1 {
@@ -209,21 +238,43 @@ html body .top a,
   text-align: center;
   margin: 3% 0;
 }
+@media (max-width: 500px) {
+  html body .top a,
+  .container body .top a {
+    width: 45%;
+    align-self: center;
+    margin-top: 4%;
+  }
+}
 html body .middle,
 .container body .middle {
   /*width: 48%;*/
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
+  flex-flow: row nowrap;
   padding-bottom: 5%;
   font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  html body .middle,
+  .container body .middle {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
 html body .middle .listen,
 .container body .middle .listen {
   width: 47%;
   display: flex;
-  flex-flow: column nowrap;
   justify-content: space-between;
+  flex-flow: column nowrap;
+}
+@media (max-width: 500px) {
+  html body .middle .listen,
+  .container body .middle .listen {
+    width: 100%;
+    margin: 2% auto;
+  }
 }
 html body .middle h1,
 .container body .middle h1 {
@@ -242,6 +293,13 @@ html body .middle .stuff p,
   vertical-align: center;
   padding: 1%;
 }
+@media (max-width: 500px) {
+  html body .middle .stuff,
+  .container body .middle .stuff {
+    width: 100%;
+    margin: 2% auto;
+  }
+}
 html body .bottom,
 .container body .bottom {
   font-size: 1.5rem;
@@ -249,13 +307,12 @@ html body .bottom,
   display: flex;
   flex-flow: column wrap;
   line-height: 2;
-  align-items: baseline;
 }
 html body .bottom .row,
 .container body .bottom .row {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
+  flex-flow: row nowrap;
   width: 100%;
   border-bottom: 1px gray solid;
   padding: 1%;
