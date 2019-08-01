@@ -136,41 +136,148 @@ html,
   max-width: 1200px;
   padding: 1%;
   font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* body*/
+}
+html header,
+.container header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+html header nav,
+.container header nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+html header nav a,
+.container header nav a {
+  text-decoration: none;
+  color: black;
+  margin-top: 20%;
 }
 html body,
 .container body {
   display: flex;
   flex-flow: row wrap;
-  color: purple;
-  font-size: 1.8rem;
-}
-html body header,
-.container body header {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-html body header nav,
-.container body header nav {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-}
-html body header nav a,
-.container body header nav a {
-  text-decoration: none;
   color: black;
+  font-size: 1.8rem;
 }
 html body .top,
 .container body .top {
-  padding: 2%;
+  padding: 3%;
   margin: 2% auto;
-  height: 40%;
+  height: 60rem;
   background: #e9dfdf;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
+}
+html body .top .jonny,
+.container body .top .jonny {
+  margin-top: 5%;
+  width: 33%;
+  height: 50%;
 }
 html body .top h1,
 .container body .top h1 {
+  font-size: 4rem;
+  padding-top: 2%;
+}
+html body .top h2,
+.container body .top h2 {
+  font-size: 1.8rem;
+  padding: 2% 0;
+  border-bottom: solid black 1px;
+}
+html body .top p,
+.container body .top p {
+  font-size: 1.5rem;
+  margin-top: 2%;
+}
+html body .top a,
+.container body .top a {
+  text-decoration: none;
+  color: black;
+  /*font-size: 1.8rem;*/
+  border: 1px darkgray solid;
+  border-radius: 7px;
+  background: darkgray;
+  width: 15%;
+  line-height: 2;
+  text-align: center;
+  margin: 3% 0;
+}
+html body .middle,
+.container body .middle {
+  /*width: 48%;*/
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-bottom: 5%;
+  font-size: 1.5rem;
+}
+html body .middle .listen,
+.container body .middle .listen {
+  width: 47%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+html body .middle h1,
+.container body .middle h1 {
   font-size: 2.5rem;
+  padding-bottom: 2%;
+}
+html body .middle .stuff,
+.container body .middle .stuff {
+  width: 47%;
+}
+html body .middle .stuff p,
+.container body .middle .stuff p {
+  border: 1px black solid;
+  margin: 0;
+  line-height: 2;
+  vertical-align: center;
+  padding: 1%;
+}
+html body .bottom,
+.container body .bottom {
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  line-height: 2;
+  align-items: baseline;
+}
+html body .bottom .row,
+.container body .bottom .row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px gray solid;
+  padding: 1%;
+}
+html body .bottom .two,
+.container body .bottom .two {
+  background: #e9dfdf;
+}
+html body .bottom .four,
+.container body .bottom .four {
+  background: #e9dfdf;
+}
+html body h1,
+.container body h1 {
+  font-size: 2.5rem;
+  padding-bottom: 2%;
+}
+html footer,
+.container footer {
+  background-color: darkgray;
+  width: 100%;
+  line-height: 4;
+  text-align: center;
+  margin: 4% auto;
 }

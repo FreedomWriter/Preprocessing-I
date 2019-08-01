@@ -53,7 +53,7 @@ table {
     box-sizing: border-box;
 }
 
-@colors: purple;
+@colors: black;
 @grays: rgb(233, 223, 223);
 
 html, .container {
@@ -61,6 +61,26 @@ html, .container {
 	max-width: 1200px;
 	padding: 1%;
 	font-size: 62.5%;
+	font-family: Arial, Helvetica, sans-serif;
+
+	header {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+
+		nav {
+			width: 30%;
+			display: flex;
+			justify-content: space-between;
+	
+			a {
+				text-decoration: none;
+				color: black;
+				margin-top: 20%
+			}
+		}
+	}
+
 
 	body {
 		display: flex;
@@ -68,36 +88,125 @@ html, .container {
 		color: @colors;
 		font-size: 1.8rem;
 
-		header {
-			width: 100%;
-			display: flex;
-			justify-content: flex-end;
-
-			nav {
-				width: 30%;
-				display: flex;
-				justify-content: space-between;
 		
-				a {
-					text-decoration: none;
-					color: black;
+		.top {
+			padding: 3%;
+			margin: 2% auto;
+			height: 60rem;
+			background: @grays;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+
+			.jonny {
+				margin-top: 5%;
+				width: 33%;
+				height: 50%;
+			}
+
+			h1 {
+				font-size: 4rem;
+				padding-top: 2%;
+			}
+
+			h2 {
+				font-size: 1.8rem;
+				padding: 2% 0;
+				border-bottom: solid black 1px;
+			}
+
+			p {
+				font-size: 1.5rem;
+				margin-top: 2%;
+			}
+
+			a {
+				text-decoration: none;
+				color: black;
+				/*font-size: 1.8rem;*/
+				border: 1px darkgray solid;
+				border-radius: 7px;
+				background: darkgray;
+				width: 15%;
+				line-height: 2;
+				text-align: center;
+				margin: 3% 0;
+			}
+		}
+
+		.middle {
+			/*width: 48%;*/
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			padding-bottom: 5%;
+			font-size: 1.5rem;
+
+			.listen {
+				width: 47%;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: space-between;
+			}
+
+			h1 {
+				font-size: 2.5rem;
+				padding-bottom: 2%;
+			}
+
+			.stuff {
+				width: 47%;
+
+				p {
+					border: 1px black solid;
+					margin: 0;
+					line-height: 2;
+					vertical-align: center;
+					padding: 1%;
 				}
 			}
 		}
 
-		.top {
-			padding: 2%;
-			margin: 2% auto;
-			height: 40%;
-			background: @grays;
+		.bottom {
+			font-size: 1.5rem;
+			width: 100%;
 			display: flex;
-			flex-flow: column nowrap;
+			flex-flow: column wrap;
+			line-height: 2;
+			align-items: baseline;
 
-			h1 {
-				font-size: 2.5rem;
+			.row {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				width: 100%;
+				border-bottom: 1px gray solid;
+				padding: 1%;
+				
+			}
+		
+
+			.two {
+				background: @grays;
+			}
+			
+			.four {
+				background: @grays;
 			}
 		}
-	}
-	
-}
 
+		h1 	{
+		font-size: 2.5rem;
+		padding-bottom: 2%;
+		}
+
+	} /* body*/
+	
+	footer {
+		background-color: darkgray;
+		width: 100%;
+		line-height: 4;
+		text-align: center;
+		margin: 4% auto;
+	}
+}
