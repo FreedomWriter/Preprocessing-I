@@ -60,9 +60,9 @@ table {
 
 /* mixins*/
 
-.flex-spacebtwn {
-	display: flex;
-	justify-content: space-between;
+.flex-justify(@display: flex, @justify: space-between) {
+	display: @display;
+	justify-content: @justify;
 }
 
 .col-nowrap {
@@ -70,8 +70,9 @@ table {
 	flex-flow: column nowrap;
 }
 
-html, .container {
+html, .container .about {
 	height: 100%;
+	background-color: #848482;
 	max-width: 1200px;
 	padding: 1%;
 	font-size: 62.5%;
@@ -81,16 +82,31 @@ html, .container {
 		margin: 0% 2%;
 	}
 
-	
-
 	header {
 		width: 100%;
+		padding: 2% 12.5%;
 		display: flex;
-		justify-content: flex-end;
+		flex-flow: column nowrap;
+		border: 1px darkmagenta solid;
+		margin: 0 auto;
+		background: @grays;
+		
+
+		.img {
+			margin: 0 auto;
+		}
+
+			img {
+				max-width: 200px;
+				max-height: 200px;
+				border-radius: 100%;
+				padding: 2%;
+			}
 
 		nav {
-			width: 30%;
-			.flex-spacebtwn();
+			width: 100%;
+			.flex-justify();
+			
 			@media (max-width: 500px) {
 				width: 100%;
 			}
@@ -98,7 +114,8 @@ html, .container {
 			a {
 				text-decoration: none;
 				color: @colors;
-				margin-top: 20%
+				padding: 20px;
+				
 				
 			}
 		}
@@ -110,25 +127,18 @@ html, .container {
 		flex-flow: row wrap;
 		color: @colors;
 		font-size: 1.8rem;
+
+		
 		
 		.top {
 			padding: 3%;
 			margin: 2% auto;
 			height: 60rem;
 			background: @grays;
-			.flex-spacebtwn();
+			.flex-justify();
 			flex-flow: column nowrap;
 
-			.jonny {
-				margin-top: 5%;
-				width: 33%;
-				height: 50%;
-
-				@media (max-width: 500px) {
-					width: 100%;
-					height: 100%;
-				}
-			}
+			
 
 			h1 {
 				font-size: 4rem;
@@ -168,7 +178,7 @@ html, .container {
 
 		.middle {
 			/*width: 48%;*/
-			.flex-spacebtwn();
+			.flex-justify();
 			flex-flow: row nowrap;
 			padding-bottom: 5%;
 			font-size: 1.5rem;
@@ -179,7 +189,7 @@ html, .container {
 
 			.listen {
 				width: 47%;
-				.flex-spacebtwn();
+				.flex-justify();
 				flex-flow: column nowrap;
 
 				@media (max-width: 500px) {
@@ -219,7 +229,7 @@ html, .container {
 			line-height: 2;
 			
 			.row {
-				.flex-spacebtwn();
+				.flex-justify();
 				flex-flow: row nowrap;
 				width: 100%;
 				border-bottom: 1px gray solid;
@@ -240,6 +250,15 @@ html, .container {
 		h1 	{
 		font-size: 2.5rem;
 		padding-bottom: 2%;
+		}
+
+		.about {
+			width: 100%;
+			padding: 2% 12.5%;
+			display: flex;
+			flex-flow: column nowrap;
+			border: 1px darkblue solid;
+			margin: 0 auto;
 		}
 
 	} /* body*/

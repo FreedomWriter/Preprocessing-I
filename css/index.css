@@ -132,17 +132,14 @@ table {
 }
 /* variables */
 /* mixins*/
-.flex-spacebtwn {
-  display: flex;
-  justify-content: space-between;
-}
 .col-nowrap {
   display: flex;
   flex-flow: column nowrap;
 }
 html,
-.container {
+.container .about {
   height: 100%;
+  background-color: #848482;
   max-width: 1200px;
   padding: 1%;
   font-size: 62.5%;
@@ -151,43 +148,58 @@ html,
 }
 @media (max-width: 500px) {
   html,
-  .container {
+  .container .about {
     margin: 0% 2%;
   }
 }
 html header,
-.container header {
+.container .about header {
   width: 100%;
+  padding: 2% 12.5%;
   display: flex;
-  justify-content: flex-end;
+  flex-flow: column nowrap;
+  border: 1px darkmagenta solid;
+  margin: 0 auto;
+  background: #e9dfdf;
+}
+html header .img,
+.container .about header .img {
+  margin: 0 auto;
+}
+html header img,
+.container .about header img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 100%;
+  padding: 2%;
 }
 html header nav,
-.container header nav {
-  width: 30%;
+.container .about header nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 500px) {
   html header nav,
-  .container header nav {
+  .container .about header nav {
     width: 100%;
   }
 }
 html header nav a,
-.container header nav a {
+.container .about header nav a {
   text-decoration: none;
   color: black;
-  margin-top: 20%;
+  padding: 20px;
 }
 html body,
-.container body {
+.container .about body {
   display: flex;
   flex-flow: row wrap;
   color: black;
   font-size: 1.8rem;
 }
 html body .top,
-.container body .top {
+.container .about body .top {
   padding: 3%;
   margin: 2% auto;
   height: 60rem;
@@ -196,37 +208,24 @@ html body .top,
   justify-content: space-between;
   flex-flow: column nowrap;
 }
-html body .top .jonny,
-.container body .top .jonny {
-  margin-top: 5%;
-  width: 33%;
-  height: 50%;
-}
-@media (max-width: 500px) {
-  html body .top .jonny,
-  .container body .top .jonny {
-    width: 100%;
-    height: 100%;
-  }
-}
 html body .top h1,
-.container body .top h1 {
+.container .about body .top h1 {
   font-size: 4rem;
   padding-top: 2%;
 }
 html body .top h2,
-.container body .top h2 {
+.container .about body .top h2 {
   font-size: 1.8rem;
   padding: 2% 0;
   border-bottom: solid black 1px;
 }
 html body .top p,
-.container body .top p {
+.container .about body .top p {
   font-size: 1.5rem;
   margin-top: 2%;
 }
 html body .top a,
-.container body .top a {
+.container .about body .top a {
   text-decoration: none;
   color: black;
   /*font-size: 1.8rem;*/
@@ -240,14 +239,14 @@ html body .top a,
 }
 @media (max-width: 500px) {
   html body .top a,
-  .container body .top a {
+  .container .about body .top a {
     width: 45%;
     align-self: center;
     margin-top: 4%;
   }
 }
 html body .middle,
-.container body .middle {
+.container .about body .middle {
   /*width: 48%;*/
   display: flex;
   justify-content: space-between;
@@ -257,13 +256,13 @@ html body .middle,
 }
 @media (max-width: 500px) {
   html body .middle,
-  .container body .middle {
+  .container .about body .middle {
     display: flex;
     flex-flow: column nowrap;
   }
 }
 html body .middle .listen,
-.container body .middle .listen {
+.container .about body .middle .listen {
   width: 47%;
   display: flex;
   justify-content: space-between;
@@ -271,22 +270,22 @@ html body .middle .listen,
 }
 @media (max-width: 500px) {
   html body .middle .listen,
-  .container body .middle .listen {
+  .container .about body .middle .listen {
     width: 100%;
     margin: 2% auto;
   }
 }
 html body .middle h1,
-.container body .middle h1 {
+.container .about body .middle h1 {
   font-size: 2.5rem;
   padding-bottom: 2%;
 }
 html body .middle .stuff,
-.container body .middle .stuff {
+.container .about body .middle .stuff {
   width: 47%;
 }
 html body .middle .stuff p,
-.container body .middle .stuff p {
+.container .about body .middle .stuff p {
   border: 1px black solid;
   margin: 0;
   line-height: 2;
@@ -295,13 +294,13 @@ html body .middle .stuff p,
 }
 @media (max-width: 500px) {
   html body .middle .stuff,
-  .container body .middle .stuff {
+  .container .about body .middle .stuff {
     width: 100%;
     margin: 2% auto;
   }
 }
 html body .bottom,
-.container body .bottom {
+.container .about body .bottom {
   font-size: 1.5rem;
   width: 100%;
   display: flex;
@@ -309,7 +308,7 @@ html body .bottom,
   line-height: 2;
 }
 html body .bottom .row,
-.container body .bottom .row {
+.container .about body .bottom .row {
   display: flex;
   justify-content: space-between;
   flex-flow: row nowrap;
@@ -318,20 +317,29 @@ html body .bottom .row,
   padding: 1%;
 }
 html body .bottom .two,
-.container body .bottom .two {
+.container .about body .bottom .two {
   background: #e9dfdf;
 }
 html body .bottom .four,
-.container body .bottom .four {
+.container .about body .bottom .four {
   background: #e9dfdf;
 }
 html body h1,
-.container body h1 {
+.container .about body h1 {
   font-size: 2.5rem;
   padding-bottom: 2%;
 }
+html body .about,
+.container .about body .about {
+  width: 100%;
+  padding: 2% 12.5%;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px darkblue solid;
+  margin: 0 auto;
+}
 html footer,
-.container footer {
+.container .about footer {
   background-color: darkgray;
   width: 100%;
   line-height: 4;
